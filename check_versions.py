@@ -40,8 +40,6 @@ def run_pip_command(command, args, global_packages=True):
     """Execute a pip command and return its output."""
     try:
         cmd = [sys.executable, '-m', 'pip'] + command
-        if not global_packages:
-            cmd.append('--user')
         cmd.extend(args)
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         return result.stdout
@@ -232,13 +230,13 @@ def check_project_packages(console, requirements_file):
     # Analysis progress messages with timing
     console.print("Analyzing project dependencies...")
     start_time = time.time()
-    all_installed = get_all_packages(global_packages=False)
+    all_installed = get_all_packages()  # Removed global_packages=False
     analysis_time = time.time() - start_time
     console.print(f"Analysis completed in {analysis_time:.2f}s")
     
     console.print("Checking for updates...")
     start_time = time.time()
-    outdated = get_outdated_packages(global_packages=False)
+    outdated = get_outdated_packages()  # Removed global_packages=False
     update_check_time = time.time() - start_time
     console.print(f"Updates check completed in {update_check_time:.2f}s")
     
@@ -273,13 +271,13 @@ def check_global_packages(console):
     # Analysis progress messages with timing
     console.print("Analyzing global packages...")
     start_time = time.time()
-    all_packages = get_all_packages(global_packages=True)
+    all_packages = get_all_packages()  # Removed global_packages=True
     analysis_time = time.time() - start_time
     console.print(f"Analysis completed in {analysis_time:.2f}s")
     
     console.print("Checking for updates...")
     start_time = time.time()
-    outdated = get_outdated_packages(global_packages=True)
+    outdated = get_outdated_packages()  # Removed global_packages=True
     update_check_time = time.time() - start_time
     console.print(f"Updates check completed in {update_check_time:.2f}s")
     
@@ -389,7 +387,7 @@ def main():
                 
                 # Perform update
                 console.print("\n[bold]Updating packages...[/bold]")
-                update_packages(outdated, console, answers['scope'] == 'Global Libraries')
+                update_packages(outdated, console)  # Removed global_packages parameter
                 console.print("\n[green]Package update process completed![/green]")
             
         elif action_answers['action'] == 'Create backup only':
