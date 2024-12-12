@@ -117,11 +117,10 @@ Restores packages from a backup file.
 Checking Project Dependencies
 ```python
 # Example output for project packages
-Package Name    Current Version    Latest Version    Status       Description
-------------   ----------------   ---------------   ----------   -------------
-requests         2.26.0            2.28.1           Outdated    HTTP library
-pytest           6.2.5             7.1.2            Outdated    Testing framework
-rich            10.12.0           10.12.0          Up to date   Rich text formatting
+
+![Screenshot 2024-12-11 231323](https://github.com/user-attachments/assets/e0eb46da-dde2-44c8-ab57-1fd43b00cc52)
+
+
 ```
 
 Creating a Backup
