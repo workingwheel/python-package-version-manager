@@ -118,7 +118,7 @@ Checking Project Dependencies
 ```python
 # Example output for project packages
 
-https://github.com/user-attachments/assets/7a452ef8-1eb1-4a60-8b27-6c5f23d866fb
+![Description](Screenshot 2024-12-11 231323.png)
 
 ```
 
