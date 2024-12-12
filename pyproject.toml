@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-package-version-manager"
+version = "1.0.0"
+description = "A Python utility for managing package versions with an interactive CLI interface"
+readme = "README.md"
+authors = [{name = "workingwheel"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "rich",
+    "inquirer",
+    "packaging",
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+pkgversion = "check_versions:main"
+
+[project.urls]
+Homepage = "https://github.com/workingwheel/python-package-version-manager"
+Repository = "https://github.com/workingwheel/python-package-version-manager"
