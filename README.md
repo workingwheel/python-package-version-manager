@@ -115,12 +115,10 @@ Restores packages from a backup file.
 # Examples
 
 Checking Project Dependencies
-```python
+
 # Example output for project packages
 
 ![Python Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/main/Screenshot.png)
-
-```
 
 Creating a Backup
 ```python
