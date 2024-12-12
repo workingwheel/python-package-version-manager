@@ -118,9 +118,7 @@ Checking Project Dependencies
 ```python
 # Example output for project packages
 
-![Screenshot 2024-12-11 231323](https://github.com/user-attachments/assets/7a452ef8-1eb1-4a60-8b27-6c5f23d866fb)
-https://github-production-user-asset-6210df.s3.amazonaws.com/12243348/395048986-7a452ef8-1eb1-4a60-8b27-6c5f23d866fb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241212T071836Z&X-Amz-Expires=300&X-Amz-Signature=3ebd161dfb039806b218fd200276393bc05f27354aeee095f6fd1cd229241b29&X-Amz-SignedHeaders=host
-
+https://github.com/user-attachments/assets/7a452ef8-1eb1-4a60-8b27-6c5f23d866fb
 
 ```
 
