@@ -118,7 +118,7 @@ Checking Project Dependencies
 ```python
 # Example output for project packages
 
-![Python Package Version Manager Screenshot](https://github.com/workingwheel/python-package-version-manager/raw/main/Screenshot%202024-12-11%20231323.png)
+![Python Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/refs/heads/main/Screenshot.png)
 
 ```
 
