@@ -116,7 +116,7 @@ Restores packages from a backup file.
 
 Checking Project Dependencies
 
-# Example output for project packages
+Example output for project packages
 
 ![Python Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/main/Screenshot.png)
 
