@@ -12,7 +12,7 @@ pip install python-pvm
 
 2. Run it:
 ```bash
-pkgversion
+python-pvm
 ```
 
 3. Common Tasks:
@@ -40,11 +40,25 @@ That's it! Keep reading for more detailed information.
   - inquirer
   - packaging
 
+# Installation
+
+## From PyPI (Recommended)
+```bash
+pip install python-pvm
+```
+
+## From Source
+```bash
+git clone https://github.com/workingwheel/python-package-version-manager.git
+cd python-package-version-manager
+pip install -e .
+```
+
 # Usage
 
 Run the tool using:
 ```bash
-pkgversion
+python-pvm
 ```
 
 The interactive menu will guide you through the following options:
@@ -119,7 +133,7 @@ Utility Functions
 
 # Examples
 
-![Package Version Manager Screenshot](https://github.com/workingwheel/python-package-version-manager/blob/main/Screenshot.png)
+![Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/main/Screenshot.png)
 
 # Error Handling
 
@@ -136,6 +150,11 @@ The script includes comprehensive error handling for:
 2. Review the status table before proceeding with updates
 3. Keep track of backup files for version control
 4. Use project-specific checking for isolated environments
+
+# Links
+
+- PyPI Package: [python-pvm](https://pypi.org/project/python-pvm/)
+- GitHub Repository: [python-package-version-manager](https://github.com/workingwheel/python-package-version-manager)
 
 # Contributing
 
