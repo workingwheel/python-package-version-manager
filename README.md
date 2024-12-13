@@ -119,7 +119,7 @@ Utility Functions
 
 # Examples
 
-![Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/main/screenshot.png)
+![Package Version Manager Screenshot](https://github.com/workingwheel/python-package-version-manager/blob/main/Screenshot.png)
 
 # Error Handling
 
