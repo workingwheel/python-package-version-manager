@@ -1,21 +1,18 @@
-# python-package-version-manager
+# python-pvm
 
 A Python utility for managing package versions with an interactive CLI interface. This tool helps you monitor, update, and backup your Python packages, whether they're project-specific or globally installed.
 
 # Quick Start for Beginners
-
 Want to get started quickly? Here's what you need to know:
 
 1. Install the tool:
-
 ```bash
-pip install git+https://github.com/workingwheel/python-package-version-manager.git
+pip install python-pvm
 ```
 
-2. Run it using Python:
-
+2. Run it:
 ```bash
-python check_versions.py
+pkgversion
 ```
 
 3. Common Tasks:
@@ -37,27 +34,17 @@ That's it! Keep reading for more detailed information.
 
 # Requirements
 
-- Python 3.x
-- Required packages:
+- Python 3.12 or higher
+- Required packages (automatically installed):
   - rich
   - inquirer
   - packaging
 
-# Installation
-
-1. Clone or download this script
-2. Install required packages:
-
-```bash
-pip install rich inquirer packaging
-```
-
 # Usage
 
-Run the script using Python:
-
+Run the tool using:
 ```bash
-python check_versions.py
+pkgversion
 ```
 
 The interactive menu will guide you through the following options:
@@ -75,7 +62,6 @@ The interactive menu will guide you through the following options:
 # Features in Detail
 
 Package Status Display
-
 - Shows package name, current version, latest version, and description
 - Color-coded status indicators:
   - Green: Up to date
@@ -84,14 +70,12 @@ Package Status Display
 - Sorted display with outdated packages shown first
 
 Backup System
-
 - Automatic backup creation before updates
 - Manual backup creation option
 - Restore from previous backups
 - Backups stored in `package_backups` directory with timestamps
 
 Progress Tracking
-
 - Visual progress bars for updates and restores
 - Time elapsed tracking
 - Spinner animations for ongoing processes
@@ -100,80 +84,46 @@ Progress Tracking
 
 Main Functions
 
-`main()`
-The entry point of the application. Handles the interactive menu and orchestrates the overall flow of the program.
+`main()` The entry point of the application. Handles the interactive menu and orchestrates the overall flow of the program.
 
-`check_project_packages(console, requirements_file)`
-Analyzes packages listed in a requirements file.
-
+`check_project_packages(console, requirements_file)` Analyzes packages listed in a requirements file.
 - Parameters:
   - `console`: Rich console instance for output
   - `requirements_file`: Path to requirements.txt
 
-`check_global_packages(console)`
-Analyzes globally installed packages.
-
+`check_global_packages(console)` Analyzes globally installed packages.
 - Parameters:
   - `console`: Rich console instance for output
 
 Utility Functions
 
-`get_package_descriptions_parallel(packages, max_workers=10)`
-Fetches package descriptions concurrently for better performance.
-
+`get_package_descriptions_parallel(packages, max_workers=10)` Fetches package descriptions concurrently for better performance.
 - Parameters:
   - `packages`: List of package dictionaries
   - `max_workers`: Maximum number of concurrent workers (default: 10)
 
-`update_packages(outdated_packages, console, global_packages=True)`
-Updates outdated packages with progress tracking.
-
+`update_packages(outdated_packages, console, global_packages=True)` Updates outdated packages with progress tracking.
 - Parameters:
   - `outdated_packages`: List of packages to update
   - `console`: Rich console instance
   - `global_packages`: Boolean for global/local scope
 
-`create_backup(packages)`
-Creates a timestamped backup of current package versions.
-
+`create_backup(packages)` Creates a timestamped backup of current package versions.
 - Parameters:
   - `packages`: List of package information to backup
 
-`restore_packages(backup_file, console)`
-Restores packages from a backup file.
-
+`restore_packages(backup_file, console)` Restores packages from a backup file.
 - Parameters:
   - `backup_file`: Path to backup JSON file
   - `console`: Rich console instance
 
 # Examples
 
-An example output for project packages:
-
-![Python Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/main/Screenshot.png)
-
-Creating a Backup
-
-```python
-# Example backup file structure (package_versions_20240101_120000.json)
-[
-    {
-        "name": "requests",
-        "version": "2.26.0",
-        "description": "HTTP library"
-    },
-    {
-        "name": "pytest",
-        "version": "6.2.5",
-        "description": "Testing framework"
-    }
-]
-```
+![Package Version Manager Screenshot](https://raw.githubusercontent.com/workingwheel/python-package-version-manager/main/screenshot.png)
 
 # Error Handling
 
 The script includes comprehensive error handling for:
-
 - File operations
 - Package management operations
 - User interruptions
